@@ -454,7 +454,6 @@ fn remove_code_at_index(
     app: &mut App,
 ) -> Result<(), Box<dyn Error>> {
     if let Some(selected) = code_list_state.selected() {
-        println!("{}", selected);
         app.messages.remove(selected);
         code_list_state.select(Some(if selected > 1 { selected - 1 } else { 0 }));
     }
@@ -478,7 +477,6 @@ fn generate_code(key: String) -> Result<u64, Box<dyn std::error::Error>> {
 
     let keyc = hmac::Key::new(hmac::HMAC_SHA256, &ctk);
     let s = hmac::sign(&keyc, &ct.to_be_bytes());
-    // println!("in hex{:?}", s);
     let code;
     let mut signature = s.as_ref();
 
