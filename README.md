@@ -1,6 +1,6 @@
 # CLI-TOTP-AUTHENTICATOR
 
-<img src="./assets/demo.gif" alt="Demo">
+<img src="./assets/demo.gif" alt="Demo" width="720" height="416">
 
 `cli-totp-authenticator` is a CLI that allows generating a Time-Based One-Time Password according to how it is defined in [rfc6238](https://datatracker.ietf.org/doc/html/rfc6238)  
 
